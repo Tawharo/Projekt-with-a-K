@@ -7,25 +7,34 @@
     <title>Should I stay or should I go</title>
     <!--link to stylesheet Bootstrap/Materalize/Tailwind-->
     <!-- <link rel="stylesheet" href="_" />-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <style>
-        .card-body a {
-            word-break: break-all;
-        }
-
-        .articleHeadline {
-            line-height: 1.5;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gotu&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+    <div class="jumbotron">
+        <img src="assets/images/cats-lunch.jpeg" id="cat-lady">
+        <div class="container">
+            <h1>Should I stay...or should I go?</h1>
+            <h6>You are hungry and having a hard time deciding where to eat. Should you stay at home and cook a
+                delicious
+                meal? or go out with your friends to a local restaurant?</h6>
+        </div>
+    </div>
     <div class="container">
-        <div class="jumbotron" style="background-color:aquamarine ; color: whitesmoke;">
-            <h1 class="text-center">
-                <strong>
-                    <i class="fa fa-food-o"></i> Should I stay...or should I go?</strong>
-            </h1>
+        <h1>I am in the mood for...<h1>
+        <form class="city-search">
+            <input id="search-box" type="text" placeholder="French..." name="search">
+
+        </form>
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Should I Stay... In?</button>
+            <br>
+            <button type="button" class="btn btn-secondary">Should I Go... Out?</button>
         </div>
         <div>You are hungry and having a hard time deciding where to eat. Should you stay at home and cook a delicious
             meal? or go out with your friends to a local restaurant?</div>
