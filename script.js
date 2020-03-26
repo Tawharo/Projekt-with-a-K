@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // API key for Spoonacular
 
 
@@ -76,7 +75,6 @@ function callZomato() {
 callZomato();
 
 // "https://developers.zomato.com/api/v2.1/search?entity_type=city&q=italian&start=richmond"
-=======
 // SETUP VARIABLES
 //==================================================
 
@@ -119,4 +117,3 @@ $("#inBtn").on("click",function(){
 // 2. use those variables to run an AJAX call to spoonacular site
 // 3. breakdown the JSON object into usable fields
 // 4. dynamically generate html content
->>>>>>> f4d8a077fbd014b352611be232129441da14f7ab
