@@ -34,17 +34,23 @@ function getRecipes(cuisine) {
 }
 
 function getRecipe(id) {
-
     var recipeURL = "https://api.spoonacular.com/recipes/" + id + "/information/?apiKey=" + authKey;
-
     $.ajax({
         url: recipeURL,
         method: "GET"
     }).done(function (response) {
         console.log(response);
+        console.log(response.analyzedInstructions[0].steps[0])
+
+        let steps = $(".steps")
+        let analyzedSteps = response.analyzedInstructions[0].steps
+        
+        for(var i = 0; i <= analyzedSteps.length - 1; i++) {
+            steps.append(`${analyzedSteps[i].number} )`)
+            steps.append(` ${analyzedSteps[i].step} <br>`) 
+        }
     });
 }
-
 $("#inBtn").on("click", function () {
     var searchInput = $("#search-box").val().trim();
     getRecipes(searchInput)
