@@ -3,7 +3,6 @@
 //==================================================
 var authKey = "e9bfe5db325344ae8c46552552da294d";
 
-
 function getRecipes(cuisine) {
     //cuisine parameter will keep changing value as per the value the user put into seach box
     // see line 69 for reference
@@ -26,7 +25,6 @@ function getRecipes(cuisine) {
         //Math floor math random will always round down the result, that's why we need to + 1 so we could get the result of the last item in the array
         var random = Math.floor(Math.random() * response.results.length + 1);
         //console.log(random);
-
 
         var title = $("<h5>");
         //add the random result from the array and try to get the image, id & title of that random recipe
@@ -81,8 +79,6 @@ $("#inBtn").on("click", function () {
 })
 
 // ----------------------------------------------------------------------------------------------------
-
-
 // API key for Zomato
 function getRestaurant(searchInput) {
     var authKey = "94b9c61a4d536d30ce9af305b01251f1";
@@ -118,8 +114,7 @@ function getRestaurant(searchInput) {
             $('.recipes').append(restNameEl, restAddEl, restRatingEl);
         }
     });
-
-    };
+};
 
 //  button for finding the restaurants
 $('#outBtn').on('click', function () {
@@ -127,11 +122,5 @@ $('#outBtn').on('click', function () {
     $('.recipes').empty();
     $('.steps').empty();
     getRestaurant(searchInput);
-
 });
 
-
-// // 1. retrieve user inputs and convert to variables
-// // 2. use those variables to run an AJAX call to spoonacular site
-// // 3. breakdown the JSON object into usable fields
-// // 4. dynamically generate html content
