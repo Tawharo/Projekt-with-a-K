@@ -4,7 +4,8 @@ var authKey = "e9bfe5db325344ae8c46552552da294d";
 
 
 function getRecipes(cuisine) {
-
+    //cuisine parameter will keep changing value as per the value the user put into seach box
+    // see line 69 for reference
     var queryURL = "https://api.spoonacular.com/recipes/complexSearch?cuisine=" + cuisine + "&apiKey=" + authKey;
 
     // FUNCTIONS
@@ -17,19 +18,29 @@ function getRecipes(cuisine) {
         //do a for loop to look thru the response results for all recipes, can limit to like 5
         //take the id and pass it into a 2nd url to get the recipe instructions and ingerdients
         //display the title onto the webpage, then display the recipe
-        console.log(response);
-        console.log(response.results[0].title);
-        var imageResult = response.results[0].image;
-        var img = $("<img>");
-        img.attr("src", imageResult);
-        var id = (response.results[0].id);
+       // console.log(response);
+        //console.log(response.results[0].title);
 
-        getRecipe(id);
-
+        //generate a random result from the response, so we get a different recipe whenver the user look up a cuisine
+        //Math floor math random will always round down the result, that's why we need to + 1 so we could get the result of the last item in the array
+        var random = Math.floor(Math.random() * response.results.length + 1);
+        //console.log(random);
 
 
         var title = $("<h5>");
-        title.text(response.results[0].title);
+        //add the random result from the array and try to get the image, id & title of that random recipe
+        var imageResult = response.results[random].image;
+        var id = (response.results[random].id);
+        title.text(response.results[random].title);
+        //create image tag
+        var img = $("<img>");
+        //adding source to the image tag
+        img.attr("src", imageResult);
+
+        //call the getReipe function and pass ihe id value into the getRecipe parameter
+        getRecipe(id);
+
+        //append the title and image into the .recipes div
         $(".recipes").append(title, img);
     });
 }
@@ -52,11 +63,21 @@ function getRecipe(id) {
         }
     });
 }
+
+//when you click the inBtn
+//user search input value is saved in to searchInput variable
+//.recipes & .steps divs will get emptied out
+//getRecipes function is called, and passed the value of the search input
 $("#inBtn").on("click", function () {
     var searchInput = $("#search-box").val().trim();
-    getRecipes(searchInput)
+    //.recipes is for recipe title & picture
+    $(".recipes").empty();
+    //.steps is for instructions
+    $(".steps").empty();
+    getRecipes(searchInput);
+
 })
-    //  button for finding the restaurants
+//  button for finding the restaurants
 $("#outBtn").on("click", function () {
     var searchInput = $("#search-box").val().trim();
 
