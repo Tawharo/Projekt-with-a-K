@@ -1,35 +1,82 @@
 body {
-    background-color: rgba(217,206,206);
+  background-color: rgba(217, 206, 206);
 }
-
 .jumbotron {
-    background-image: linear-gradient(to right,#800000, #260000);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  background-image: linear-gradient(to right, #800000, #260000);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #cat-lady {
-    border-radius: 5px;
-    box-shadow: 5px 10px 18px #f3f58dd7;
+  border-radius: 5px;
+  box-shadow: 1px 5px 18px #f6f7d9d7;
 }
 
 h1 {
-    color: white;
-    font-family: 'Gotu', sans-serif;
-    font-size: 50px;
+  color: white;
+  font-family: "Gotu", sans-serif;
+  font-size: 50px;
 }
 
 h2 {
-    color: white;
-    font-family: 'Gotu', sans-serif;
+  color: white;
+  font-family: "Gotu", sans-serif;
 }
 
 h6 {
-    color: white;
-    font-family: 'Gotu', sans-serif;
+  color: white;
+  font-family: "Gotu", sans-serif;
 }
 
+#inBtn {
+  margin: 10px 18px 10px 0;
+}
 
+#outBtn {
+  margin: 10px 0 10px 95px;
+}
 
+button:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.3s;
 
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
