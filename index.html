@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Should I stay or should I go</title>
-    <!--link to stylesheet Bootstrap/Materalize/Tailwind-->
-    <!-- <link rel="stylesheet" href="_" />-->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,44 +14,41 @@
 
 <body>
 
-        <div class="jumbotron">
-            <img src="assets/images/strummer-eats.jpeg" id="cat-lady">
+    <div class="jumbotron">
+
+        <img src="assets/images/strummer-eats.jpeg" id="cat-lady">
+        <div class="container">
+            <h1>Should I stay...or should I go?</h1>
             <div class="container">
-                <h1>Should I stay...or should I go?</h1>
-                <div class="container">
-                    <h2>I am in the mood for...<h2>
-                            <form class="cuisine-search">
-                                <input id="search-box" type="text" placeholder="French..." name="search">
 
-                            </form>
-
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-secondary" id="inBtn">Should I Stay... In?</button>
-                                <br>
-                                <button type="button" class="btn btn-secondary" id="outBtn">Should I Go... Out?</button>
-                            </div>
-
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">This sounds yummy:</h3>
-                </div>
-                <div class="panel-body">
-                </div>
-                <div class="recipes">
-
-                </div>
-                <div class="steps"></div>
+                <h2>I am in the mood for...<h2>
+                        <form class="cuisine-search">
+                            <input id="search-box" type="text" placeholder="French..." name="search">
+                        </form>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary" id="inBtn">Should I Stay... In?</button>
+                            <br>
+                            <button type="button" class="btn btn-secondary" id="outBtn">Should I Go... Out?</button>
+                        </div>
             </div>
         </div>
     </div>
 
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">This sounds yummy:</h3>
+            </div>
+            <div class="panel-body">
+            </div>
+            <div class="recipes">
 
-    <!-- link to JavaScript file -->
+            </div>
+            <div class="steps"></div>
+        </div>
+    </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
